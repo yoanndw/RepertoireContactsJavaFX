@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/javafx" fx:controller="com.example.ex2.controller.RepertoryController">
+    <top>
+        <MenuBar>
+            <Menu text="Fichier">
+                <MenuItem text="Nouveau" onAction="#onClickNouveau"/>
+                <MenuItem text="Ouvrir" onAction="#onClickOuvrir"/>
+                <MenuItem text="Sauvegarder" onAction="#onClickSauvegarder"/>
+                <MenuItem text="Fermer" onAction="#onClickFermer"/>
+            </Menu>
+
+            <Menu text="Aide">
+                <MenuItem text="À propos" onAction="#onClickAide"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <SplitPane orientation="HORIZONTAL">
+            <ListView fx:id="peopleListView" onMouseClicked="#onSelectPerson"/>
+
+            <VBox>
+                <padding>
+                    <Insets top="10" bottom="10" left="10" right="10"/>
+                </padding>
+
+                <spacing>3</spacing>
+
+                <Label>Prénom</Label>
+                <TextField fx:id="fldPrenom">Yoann</TextField>
+
+                <Label>Nom</Label>
+                <TextField fx:id="fldNom">DEWILDE</TextField>
+
+                <Label>Téléphone</Label>
+                <TextField fx:id="fldTel">01 23 45 67 89</TextField>
+
+                <Label>Email</Label>
+                <TextField fx:id="fldEmail">dewilde.e1900976@etud.univ-ubs.fr</TextField>
+            </VBox>
+        </SplitPane>
+    </center>
+
+    <bottom>
+        <BorderPane>
+            <padding>
+                <Insets topRightBottomLeft="7"/>
+            </padding>
+
+            <left>
+                <Button onMouseClicked="#onClickAjouter">Ajouter</Button>
+            </left>
+
+            <right>
+                <HBox>
+                    <spacing>5</spacing>
+
+                    <Button onMouseClicked="#onClickModifier">Modifier</Button>
+                    <Button onMouseClicked="#onClickSupprimer">Supprimer</Button>
+                </HBox>
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>

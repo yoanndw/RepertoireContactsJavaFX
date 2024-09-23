@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.ex2.controller.AddController"
+>
+    <GridPane hgap="5" vgap="10">
+        <padding>
+            <Insets topRightBottomLeft="10"/>
+        </padding>
+
+        <Label
+                GridPane.rowIndex="0"
+                GridPane.columnIndex="0"
+        >
+            Prénom
+        </Label>
+        <TextField
+                GridPane.rowIndex="0"
+                GridPane.columnIndex="1"
+                fx:id="fldPrenom"
+        />
+
+        <Label
+                GridPane.rowIndex="1"
+                GridPane.columnIndex="0"
+        >
+            Nom
+        </Label>
+        <TextField
+                GridPane.rowIndex="1"
+                GridPane.columnIndex="1"
+                fx:id="fldNom"
+        />
+
+        <Label
+                GridPane.rowIndex="2"
+                GridPane.columnIndex="0"
+        >
+            Téléphone
+        </Label>
+        <TextField
+                GridPane.rowIndex="2"
+                GridPane.columnIndex="1"
+                fx:id="fldTel"
+        />
+
+        <Label
+                GridPane.rowIndex="3"
+                GridPane.columnIndex="0"
+        >
+            Email
+        </Label>
+        <TextField
+                GridPane.rowIndex="3"
+                GridPane.columnIndex="1"
+                fx:id="fldEmail"
+        />
+
+    </GridPane>
+
+    <BorderPane>
+        <padding>
+            <Insets topRightBottomLeft="5"/>
+        </padding>
+
+        <right>
+            <HBox>
+                <spacing>10</spacing>
+
+                <Button fx:id="btnClose" onMouseClicked="#close">Annuler</Button>
+                <Button onMouseClicked="#confirm">Ajouter</Button>
+            </HBox>
+        </right>
+    </BorderPane>
+</VBox>
